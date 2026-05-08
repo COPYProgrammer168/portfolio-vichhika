@@ -1,0 +1,70 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.imgWrap {
+  position: relative;
+}
+
+.imgWrap img {
+  width: 100%;
+  border-radius: 16px;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+}
+
+.imgCard {
+  position: absolute;
+  bottom: -1.2rem;
+  right: -1.2rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: .9rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  box-shadow: var(--shadow-lg);
+  font-size: .82rem;
+  color: var(--ink-2);
+  line-height: 1.45;
+}
+
+.cardEmoji { font-size: 1.6rem; }
+
+.cardText strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: .85rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.para {
+  font-size: .93rem;
+  color: var(--ink-2);
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .6rem;
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .imgWrap img { aspect-ratio: 3/2; }
+  .imgCard { right: .5rem; bottom: -1rem; }
+}
