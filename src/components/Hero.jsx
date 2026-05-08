@@ -4,7 +4,6 @@ import myPhoto from "../assets/photo.jpg";
 const titles = [
   "Software Developer",
   "Graphic Designer",
-  "Full-Stack AI Builder",
   "UI/UX Design",
 ];
 
@@ -268,20 +267,22 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <span
-          className="text-xs tracking-widest opacity-40"
-          style={{ fontFamily: "Orbitron, sans-serif", color: "var(--text)" }}
-        >
-          SCROLL DOWN TO SEE MORE
-        </span>
-        <div
-          className="w-px h-8"
-          style={{
-            background:
-              "linear-gradient(to bottom, var(--accent), transparent)",
-          }}
-        />
+      <div className="absolute bottom-8 w-full flex justify-center">
+        <div className="flex flex-col items-center gap-2 animate-bounce">
+          <span
+            className="text-xs tracking-widest opacity-40"
+            style={{ fontFamily: "Orbitron, sans-serif", color: "var(--text)" }}
+          >
+            SCROLL DOWN TO SEE MORE
+          </span>
+          <div
+            className="w-px h-8"
+            style={{
+              background:
+                "linear-gradient(to bottom, var(--accent), transparent)",
+            }}
+          />
+        </div>
       </div>
     </section>
   );

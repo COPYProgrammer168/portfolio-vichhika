@@ -6,7 +6,7 @@ const skills = [
   { name: 'PostgreSQL', level: 65, desc: 'Database design & queries', icon: '🐘', cat: 'Database' },
   { name: 'UX/UI (Figma)', level: 75, desc: 'Prototype & website design', icon: '🎨', cat: 'Design' },
   { name: 'PS / AE', level: 70, desc: 'Editing, posters, motion effects', icon: '🖌️', cat: 'Design' },
-  { name: 'Tailwind CSS', level: 60, desc: 'Utility-first CSS styling', icon: '💨', cat: 'Frontend' },
+  // { name: 'Tailwind CSS', level: 60, desc: 'Utility-first CSS styling', icon: '💨', cat: 'Frontend' },
   { name: 'Word / PPT', level: 85, desc: 'Documentation & slide design', icon: '📝', cat: 'Tools' },
   { name: 'AI Prompt Engineering', level: 60, desc: 'AI integration in projects', icon: '🤖', cat: 'Emerging' },
 ]

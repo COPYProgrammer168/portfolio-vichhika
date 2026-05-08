@@ -10,6 +10,7 @@ const personal = [
   { label: 'Nationality', value: 'Cambodian' },
   { label: 'Email', value: 'vichhika.kry@gmail.com' },
   { label: 'Phone', value: '012-949-139' },
+  { label: 'Address', value: 'Phnom Penh, Cambodia' },
   { label: 'Languages', value: 'Khmer (Native) · English (Medium)' },
   { label: 'Hobbies', value: 'Research · Workout · Music' },
 ]

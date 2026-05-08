@@ -171,7 +171,7 @@ export default function Project() {
                       color: "var(--accent)",
                     }}
                   >
-                    FINAL YEAR THESIS · 2026-03 TO PRESENT
+                    FINAL YEAR THESIS · 2026.03 - PRESENT
                   </span>
                   <h3
                     className="font-orbitron font-black text-2xl mb-2"

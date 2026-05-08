@@ -21,11 +21,11 @@ export default function Navbar({ dark, toggleTheme }) {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: 'var(--surface)',
-        borderBottom: '1px solid var(--border)',
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        boxShadow: scrolled ? '0 4px 32px var(--glow)' : '0 2px 16px rgba(0,0,0,0.08)',
+        background: 'hsla(var(--bg-h), var(--bg-s), var(--bg-l), 0.7)',
+        borderBottom: '1px solid hsla(var(--text-h), var(--text-s), var(--text-l), 0.1)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        boxShadow: scrolled ? '0 4px 32px var(--glow)' : '0 2px 16px rgba(0,0,0,0.05)',
       }}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
