@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import myPhoto from "../assets/photo.jpg";
 
-const titles = [
-  "Software Developer",
-  "Graphic Designer",
-  "UI/UX Design",
-];
+const titles = ["Software Developer", "Graphic Designer", "UI/UX Design"];
 
 export default function Hero() {
   const [titleIdx, setTitleIdx] = useState(0);
@@ -34,7 +30,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center px-6 pt-16 pb-24"
+      className="relative min-h-screen flex items-center justify-center px-6 pt-32 pb-24"
       style={{ zIndex: 1 }}
     >
       {/* Glowing orbs */}
@@ -142,22 +138,41 @@ export default function Hero() {
 
           {/* Social links */}
           <div className="flex flex-wrap gap-4 pt-2">
-            <a href="mailto:vichhika.kry@gmail.com"
+            <a
+              href="mailto:vichhika.kry@gmail.com"
               className="text-xs tracking-widest transition-all hover:opacity-100 opacity-60 font-bold"
-              style={{ color: 'var(--accent)', fontFamily: 'Orbitron, sans-serif', textDecoration: 'none' }}>
+              style={{
+                color: "var(--accent)",
+                fontFamily: "Orbitron, sans-serif",
+                textDecoration: "none",
+              }}
+            >
               vichhika.kry@gmail.com
             </a>
-            <span style={{ opacity: 0.3, color: 'var(--text)' }}>|</span>
-            <a href="tel:012949139"
+            <span style={{ opacity: 0.3, color: "var(--text)" }}>|</span>
+            <a
+              href="tel:012949139"
               className="text-xs tracking-widest transition-all hover:opacity-100 opacity-60 font-bold"
-              style={{ color: 'var(--accent)', fontFamily: 'Orbitron, sans-serif', textDecoration: 'none' }}>
+              style={{
+                color: "var(--accent)",
+                fontFamily: "Orbitron, sans-serif",
+                textDecoration: "none",
+              }}
+            >
               012-949-139
             </a>
-            <span style={{ opacity: 0.3, color: 'var(--text)' }}>|</span>
-            <a href="https://github.com/COPYProgrammer168/Tronmatix_WebTest"
-              target="_blank" rel="noopener noreferrer"
+            <span style={{ opacity: 0.3, color: "var(--text)" }}>|</span>
+            <a
+              href="https://github.com/COPYProgrammer168/Tronmatix_WebTest"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xs tracking-widest transition-all hover:opacity-100 opacity-60 font-bold"
-              style={{ color: 'var(--accent)', fontFamily: 'Orbitron, sans-serif', textDecoration: 'none' }}>
+              style={{
+                color: "var(--accent)",
+                fontFamily: "Orbitron, sans-serif",
+                textDecoration: "none",
+              }}
+            >
               GITHUB
             </a>
           </div>
@@ -191,6 +206,131 @@ export default function Hero() {
                 transform: "scale(1.15)",
               }}
             />
+          </div>
+          {/* Social Media Icons */}
+          <div className="flex items-center gap-4">
+            {/* Facebook */}
+            <a
+              href="https://web.facebook.com/vi.chhika.728842"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <div
+                className="w-10 h-10 flex items-center justify-center transition-all duration-300"
+                style={{
+                  border: "1px solid var(--border)",
+                  background: "var(--surface)",
+                  backdropFilter: "blur(8px)",
+                  clipPath:
+                    "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                  color: "var(--accent)",
+                  fontSize: "1rem",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "var(--accent)";
+                  e.currentTarget.style.color = "var(--bg)";
+                  e.currentTarget.style.boxShadow = "0 0 20px var(--glow)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "var(--surface)";
+                  e.currentTarget.style.color = "var(--accent)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
+                {/* Facebook SVG */}
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </div>
+            </a>
+
+            {/* GitHub */}
+            <a
+              href="https://github.com/COPYProgrammer168"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <div
+                className="w-10 h-10 flex items-center justify-center transition-all duration-300"
+                style={{
+                  border: "1px solid var(--border)",
+                  background: "var(--surface)",
+                  backdropFilter: "blur(8px)",
+                  clipPath:
+                    "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                  color: "var(--accent)",
+                  fontSize: "1rem",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "var(--accent)";
+                  e.currentTarget.style.color = "var(--bg)";
+                  e.currentTarget.style.boxShadow = "0 0 20px var(--glow)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "var(--surface)";
+                  e.currentTarget.style.color = "var(--accent)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
+                {/* GitHub SVG */}
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+              </div>
+            </a>
+
+            {/* X (Twitter) */}
+            <a
+              href="https://x.com/VichhK"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <div
+                className="w-10 h-10 flex items-center justify-center transition-all duration-300"
+                style={{
+                  border: "1px solid var(--border)",
+                  background: "var(--surface)",
+                  backdropFilter: "blur(8px)",
+                  clipPath:
+                    "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                  color: "var(--accent)",
+                  fontSize: "1rem",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "var(--accent)";
+                  e.currentTarget.style.color = "var(--bg)";
+                  e.currentTarget.style.boxShadow = "0 0 20px var(--glow)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "var(--surface)";
+                  e.currentTarget.style.color = "var(--accent)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
+                {/* X SVG */}
+                <svg
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </div>
+            </a>
           </div>
 
           {/* Project preview card */}
