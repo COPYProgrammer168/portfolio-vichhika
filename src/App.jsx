@@ -8,6 +8,9 @@ import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Intro from "./components/Intro";
+import CursorGlow from './components/CursorGlow'
+import ScrollProgress from './components/ScrollProgress'
+import BackToTop from './components/BackToTop'
 
 export default function App() {
   const [dark, toggleTheme] = useTheme();
@@ -15,10 +18,6 @@ export default function App() {
 
   return (
     <div style={{ minHeight: "100vh", position: "relative" }}>
-      <>
-        {!introDone && <Intro onCompletion={() => setIntroDone(true)} />}
-        <div style={{ visibility: introDone ? "visible" : "hidden" }}></div>
-      </>
 
       {/* Grid texture background */}
       <div className="grid-bg" />
@@ -34,17 +33,25 @@ export default function App() {
         }}
       />
 
-      <Navbar dark={dark} toggleTheme={toggleTheme} />
+    <CursorGlow />
+    <ScrollProgress />
+    <BackToTop />
 
-      <main style={{ position: "relative", zIndex: 1 }}>
-        <Hero />
-        <About />
-        <Skills />
-        <Project />
-        <Contact />
-      </main>
-
-      <Footer />
+    {!introDone && <Intro onComplete={() => setIntroDone(true)} />}
+    <div style={{ visibility: introDone ? 'visible' : 'hidden' }}>
+      <div style={{ minHeight: '100vh', position: 'relative' }}>
+        <div className="grid-bg" />
+        <Navbar dark={dark} toggleTheme={toggleTheme} />
+        <main style={{ position: 'relative', zIndex: 1 }}>
+          <Hero />
+          <About />
+          <Skills />
+          <Project />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </div>
     </div>
   );
 }
