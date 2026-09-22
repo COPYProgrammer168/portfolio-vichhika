@@ -28,7 +28,7 @@ export default function App() {
         style={{
           zIndex: 0,
           background: dark
-            ? "radial-gradient(ellipse at 20% 50%, rgba(0,245,228,0.04) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(168,85,247,0.04) 0%, transparent 50%)"
+            ? "radial-gradient(ellipse at 20% 50%, rgba(0,245,228,0.06) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(168,85,247,0.06) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, rgba(0,102,255,0.04) 0%, transparent 40%)"
             : "radial-gradient(ellipse at 20% 50%, rgba(0,102,255,0.05) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(124,58,237,0.04) 0%, transparent 50%)",
         }}
       />

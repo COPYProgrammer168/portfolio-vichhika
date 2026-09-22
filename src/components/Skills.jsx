@@ -40,46 +40,47 @@ export default function Skills() {
         <div ref={ref} className="fade-in">
           <h2 className="section-title mb-12">Skills</h2>
 
-          <div ref={skillsRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {skills.map(({ name, level, desc, icon, cat }, index) => (
-              <div key={name} className="sci-card p-5 group">
-                <div className="flex justify-between items-start mb-3">
-                  <span className="text-2xl">{icon}</span>
-                  <span className="skill-tag">{cat}</span>
-                </div>
-
-                <h3 className="font-orbitron font-bold text-sm mb-1"
-                  style={{ fontFamily: "Orbitron, sans-serif", color: "var(--text)" }}>
-                  {name}
-                </h3>
-                <p className="text-xs mb-4 opacity-60"
-                  style={{ color: "var(--text2)", fontFamily: "Exo 2, sans-serif" }}>
-                  {desc}
-                </p>
-
-                <div className="space-y-1">
-                  <div className="flex justify-between text-xs">
-                    <span style={{ fontFamily: "Orbitron,sans-serif", color: "var(--text2)", fontSize: "0.6rem", opacity: 0.5 }}>
-                      PROFICIENCY
-                    </span>
-                    <span style={{ fontFamily: "Orbitron,sans-serif", color: "var(--accent)", fontSize: "0.6rem" }}>
-                      {level}%
-                    </span>
+          <div className="skill-scroll-container" style={{ cursor: 'grab' }}>
+            <div ref={skillsRef} className="skill-scroll-track">
+              {[...skills, ...skills].map(({ name, level, desc, icon, cat }, index) => (
+                <div key={`${name}-${index}`} className="sci-card p-5 group" style={{ minWidth: '260px', maxWidth: '260px' }}>
+                  <div className="flex justify-between items-start mb-3">
+                    <span className="text-2xl">{icon}</span>
+                    <span className="skill-tag">{cat}</span>
                   </div>
-                  <div className="h-1 rounded-full overflow-hidden" style={{ background: "var(--border)" }}>
-                    <div style={{
-                      height: "100%",
-                      // ✅ use index directly — no more .indexOf() bug
-                      width: animated ? `${level}%` : "0%",
-                      background: "linear-gradient(90deg, var(--accent), var(--accent2))",
-                      borderRadius: "2px",
-                      boxShadow: "0 0 8px var(--glow)",
-                      transition: `width 1s ease ${index * 0.15}s`,
-                    }} />
+
+                  <h3 className="font-orbitron font-bold text-sm mb-1"
+                    style={{ fontFamily: "Orbitron, sans-serif", color: "var(--text)" }}>
+                    {name}
+                  </h3>
+                  <p className="text-xs mb-4 opacity-60"
+                    style={{ color: "var(--text2)", fontFamily: "Exo 2, sans-serif" }}>
+                    {desc}
+                  </p>
+
+                  <div className="space-y-1">
+                    <div className="flex justify-between text-xs">
+                      <span style={{ fontFamily: "Orbitron,sans-serif", color: "var(--text2)", fontSize: "0.6rem", opacity: 0.5 }}>
+                        PROFICIENCY
+                      </span>
+                      <span style={{ fontFamily: "Orbitron,sans-serif", color: "var(--accent)", fontSize: "0.6rem" }}>
+                        {level}%
+                      </span>
+                    </div>
+                    <div className="h-1 rounded-full overflow-hidden" style={{ background: "var(--border)" }}>
+                      <div style={{
+                        height: "100%",
+                        width: animated ? `${level}%` : "0%",
+                        background: "linear-gradient(90deg, var(--accent), var(--accent2))",
+                        borderRadius: "2px",
+                        boxShadow: "0 0 8px var(--glow)",
+                        transition: `width 1s ease ${index * 0.15}s`,
+                      }} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

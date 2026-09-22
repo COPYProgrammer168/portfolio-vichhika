@@ -56,7 +56,7 @@ export default function Navbar({ dark, toggleTheme }) {
           : "0 2px 16px rgba(0,0,0,0.05)",
       }}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-9xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <span
           className="font-black text-lg tracking-widest cursor-pointer"

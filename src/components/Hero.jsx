@@ -77,11 +77,12 @@ export default function Hero() {
               &gt;Hello, My Name is
             </p>
             <h1
-              className="font-orbitron font-black leading-none glow-text"
+              className="font-orbitron font-black leading-none light-sweep glitch"
               style={{
                 fontFamily: "Orbitron, sans-serif",
-                fontSize: "clamp(2.5rem, 7vw, 5rem)",
+                fontSize: "clamp(4rem, 10vw, 7rem)",
                 color: "var(--accent)",
+                lineHeight: "1.05",
               }}
             >
               KRY
