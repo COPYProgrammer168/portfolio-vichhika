@@ -202,7 +202,7 @@ export default function Hero() {
               style={{ background: "var(--accent)", transform: "scale(1.2)" }}
             />
             <div
-              className="relative w-56 h-56 md:w-72 md:h-72 rounded-md overflow-hidden glow-border"
+              className="relative w-56 h-56 md:w-72 md:h-72 rounded-sm overflow-hidden glow-border"
               style={{ border: "2px solid var(--accent)" }}
             >
               <img

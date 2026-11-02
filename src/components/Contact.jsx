@@ -108,7 +108,7 @@ export default function Contact() {
 
               {/* Telegram card */}
               <a
-                href="https://t.me/012949139"
+                href="https://t.me/vichhika_949"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="sci-card p-4 flex items-center gap-4 group"
@@ -140,7 +140,7 @@ export default function Contact() {
                     TELEGRAM
                   </div>
                   <span className="text-sm" style={{ color: 'var(--text)', fontFamily: 'Exo 2, sans-serif' }}>
-                    012-949-139
+                    @vichhika_949
                   </span>
                 </div>
               </a>
@@ -313,7 +313,7 @@ export default function Contact() {
                             </span>
                           </a>
                           <a
-                            href="https://t.me/012949139"
+                            href="https://t.me/@vichhika_949"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="sci-card px-4 py-2 flex items-center gap-2"
@@ -321,7 +321,7 @@ export default function Contact() {
                           >
                             <span style={{ color: 'var(--accent2)', fontSize: '0.9rem' }}>✈</span>
                             <span className="font-orbitron text-xs" style={{ fontFamily: 'Orbitron, sans-serif', color: 'var(--text)' }}>
-                              012-949-139
+                              @vichhika_949
                             </span>
                           </a>
                         </div>
