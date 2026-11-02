@@ -176,6 +176,20 @@ export default function Hero() {
             >
               GITHUB
             </a>
+            <span style={{ opacity: 0.3, color: "var(--text)" }}>|</span>
+            <a
+              href="https://t.me/@vichhika_949"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs tracking-widest transition-all hover:opacity-100 opacity-60 font-bold"
+              style={{
+                color: "var(--accent)",
+                fontFamily: "Orbitron, sans-serif",
+                textDecoration: "none",
+              }}
+            >
+              @vichhika_949
+            </a>
           </div>
         </div>
 
@@ -184,11 +198,11 @@ export default function Hero() {
           {/* Avatar frame */}
           <div className="relative">
             <div
-              className="absolute inset-0 rounded-full blur-2xl opacity-30"
+              className="absolute inset-0 blur-2xl opacity-30"
               style={{ background: "var(--accent)", transform: "scale(1.2)" }}
             />
             <div
-              className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden glow-border"
+              className="relative w-56 h-56 md:w-72 md:h-72 rounded-md overflow-hidden glow-border"
               style={{ border: "2px solid var(--accent)" }}
             >
               <img
