@@ -199,28 +199,23 @@ export default function Hero() {
           <div className="relative">
             <div
               className="absolute inset-0 blur-2xl opacity-30"
-              style={{ background: "var(--accent)", transform: "scale(1.2)" }}
+              style={{ background: "var(--accent)", transform: "scale(1.05)" }}
             />
-            <div
-              className="relative w-56 h-56 md:w-72 md:h-72 rounded-sm overflow-hidden glow-border"
-              style={{ border: "2px solid var(--accent)" }}
-            >
-              <img
-                src={myPhoto}
-                alt="Kry Vichhika"
-                className="w-full h-full object-cover object-top"
-              />
+            <div className="relative w-56 h-56 md:w-72 md:h-72">
+              <div className="profile-frame-backdrop" />
+              <div className="profile-frame">
+                <div className="profile-photo">
+                  <img
+                    src={myPhoto}
+                    alt="Kry Vichhika"
+                    className="w-full h-full object-cover object-top"
+                  />
+                  <div className="profile-photo-grid" />
+                  <div className="profile-scan" />
+                </div>
+              </div>
+              <span className="profile-tag">ID // KRY-VICH</span>
             </div>
-            {/* Orbit ring */}
-            <div
-              className="absolute inset-0 rounded-full border animate-spin"
-              style={{
-                borderColor:
-                  "transparent var(--accent) transparent transparent",
-                animationDuration: "8s",
-                transform: "scale(1.15)",
-              }}
-            />
           </div>
           {/* Social Media Icons */}
           <div className="flex items-center gap-4">
