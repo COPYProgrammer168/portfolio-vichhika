@@ -1,14 +1,20 @@
 import { useScrollFade } from '../hooks/useScrollFade'
 
+const icons = {
+  cap: <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z" />,
+  briefcase: <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />,
+  laptop: <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" />,
+}
+
 const timeline = [
-  { year: '2023 – Present', title: 'Norton University', desc: 'Information Technology — Software Development', icon: '🎓' },
+  { year: '2023 – Present', title: 'Norton University', desc: 'Information Technology — Software Development', icon: 'cap' },
   {
     year: '10 Jun 2026 – 10 Sep 2026',
     title: 'Web Developer Intern',
     desc: 'Completed a 3-month internship building and deploying client websites with Laravel, Blade, Tailwind CSS and Alpine.js. Built admin panels with a drag-and-drop block builder and multilingual content in Khmer, English and Chinese, implemented SEO and responsive layouts, and deployed sites on Hostinger via Git and SSH.',
-    icon: '💼',
+    icon: 'briefcase',
   },
-  { year: '2026.03-Present', title: 'Tronmatix Computer', desc: 'Full-stack E-Commerce Platform — Final Year Thesis Project', icon: '💻' },
+  { year: '2026.03-Present', title: 'Tronmatix Computer', desc: 'Full-stack E-Commerce Platform — Final Year Thesis Project', icon: 'laptop' },
 ]
 
 const personal = [
@@ -91,7 +97,11 @@ export default function About() {
                       style={{ background: 'var(--bg)', borderColor: 'var(--accent)', boxShadow: '0 0 8px var(--glow)' }} />
 
                     <div className="flex items-start gap-3">
-                      <span className="timeline-icon text-2xl">{icon}</span>
+                      <span className="timeline-icon">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                          {icons[icon]}
+                        </svg>
+                      </span>
                       <div>
                         <span className="timeline-year font-orbitron text-xs tracking-wider block mb-1"
                           style={{ fontFamily: 'Orbitron, sans-serif' }}>

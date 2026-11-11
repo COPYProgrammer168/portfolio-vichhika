@@ -155,30 +155,22 @@ body {
 .sci-card:hover { box-shadow: 0 0 32px var(--glow); transform: translateY(-3px); }
 
 /* ── STUDY_DATA TIMELINE CARDS ── */
-.sci-card.timeline-card {
-  background: #ffffff;
-  border-color: rgba(0, 0, 0, 0.15);
-}
 .sci-card.timeline-card .timeline-icon {
-  filter: grayscale(1) brightness(0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  background: var(--glow);
+  box-shadow: inset 0 0 12px var(--glow);
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 }
-.sci-card.timeline-card .timeline-year,
-.sci-card.timeline-card .timeline-title,
-.sci-card.timeline-card .timeline-desc {
-  color: #000000;
-}
-.dark .sci-card.timeline-card {
-  background: #000000;
-  border-color: rgba(255, 255, 255, 0.18);
-}
-.dark .sci-card.timeline-card .timeline-icon {
-  filter: grayscale(1) brightness(0) invert(1);
-}
-.dark .sci-card.timeline-card .timeline-year,
-.dark .sci-card.timeline-card .timeline-title,
-.dark .sci-card.timeline-card .timeline-desc {
-  color: #ffffff;
-}
+.sci-card.timeline-card .timeline-year { color: var(--accent); }
+.sci-card.timeline-card .timeline-title { color: var(--text); }
+.sci-card.timeline-card .timeline-desc { color: var(--text2); }
 
 .navbar-glass {
   background: var(--surface);
