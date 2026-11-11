@@ -2,6 +2,12 @@ import { useScrollFade } from '../hooks/useScrollFade'
 
 const timeline = [
   { year: '2023 – Present', title: 'Norton University', desc: 'Information Technology — Software Development', icon: '🎓' },
+  {
+    year: '10 Jun 2026 – 10 Sep 2026',
+    title: 'Web Developer Intern',
+    desc: 'Completed a 3-month internship building and deploying client websites with Laravel, Blade, Tailwind CSS and Alpine.js. Built admin panels with a drag-and-drop block builder and multilingual content in Khmer, English and Chinese, implemented SEO and responsive layouts, and deployed sites on Hostinger via Git and SSH.',
+    icon: '💼',
+  },
   { year: '2026.03-Present', title: 'Tronmatix Computer', desc: 'Full-stack E-Commerce Platform — Final Year Thesis Project', icon: '💻' },
 ]
 
@@ -79,23 +85,23 @@ export default function About() {
                   style={{ background: 'linear-gradient(to bottom, var(--accent), transparent)' }} />
 
                 {timeline.map(({ year, title, desc, icon }, i) => (
-                  <div key={i} className="sci-card p-5 relative ml-4">
+                  <div key={i} className="sci-card timeline-card p-5 relative ml-4">
                     {/* Dot */}
                     <div className="absolute -left-7 top-5 w-3 h-3 rounded-full border-2"
                       style={{ background: 'var(--bg)', borderColor: 'var(--accent)', boxShadow: '0 0 8px var(--glow)' }} />
 
                     <div className="flex items-start gap-3">
-                      <span className="text-2xl">{icon}</span>
+                      <span className="timeline-icon text-2xl">{icon}</span>
                       <div>
-                        <span className="font-orbitron text-xs tracking-wider block mb-1"
-                          style={{ fontFamily: 'Orbitron, sans-serif', color: 'var(--accent)' }}>
+                        <span className="timeline-year font-orbitron text-xs tracking-wider block mb-1"
+                          style={{ fontFamily: 'Orbitron, sans-serif' }}>
                           {year}
                         </span>
-                        <h3 className="font-orbitron font-bold text-sm mb-1"
-                          style={{ fontFamily: 'Orbitron, sans-serif', color: 'var(--text)' }}>
+                        <h3 className="timeline-title font-orbitron font-bold text-sm mb-1"
+                          style={{ fontFamily: 'Orbitron, sans-serif' }}>
                           {title}
                         </h3>
-                        <p className="text-xs leading-relaxed" style={{ color: 'var(--text2)', fontFamily: 'Exo 2, sans-serif' }}>
+                        <p className="timeline-desc text-xs leading-relaxed" style={{ fontFamily: 'Exo 2, sans-serif' }}>
                           {desc}
                         </p>
                       </div>
