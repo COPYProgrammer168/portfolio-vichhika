@@ -195,16 +195,26 @@ export default function Hero() {
 
         {/* Right — Visual */}
         <div className="flex flex-col items-center gap-8">
-          {/* Avatar frame */}
+          {/* Staff ID badge */}
           <div className="relative">
             <div
               className="absolute inset-0 blur-2xl opacity-30"
               style={{ background: "var(--accent)", transform: "scale(1.05)" }}
             />
-            <div className="relative w-56 h-56 md:w-72 md:h-72">
-              <div className="profile-frame-backdrop" />
-              <div className="profile-frame">
-                <div className="profile-photo">
+            <div className="relative w-60 md:w-64">
+              <div className="id-lanyard" aria-hidden="true">
+                <span className="id-strap id-strap-left" />
+                <span className="id-strap id-strap-right" />
+                <span className="id-clip" />
+              </div>
+
+              <div className="id-card">
+                <div className="id-card-top">
+                  <span className="id-card-org">STAFF ID // 2026</span>
+                  <span className="id-chip" />
+                </div>
+
+                <div className="id-photo">
                   <img
                     src={myPhoto}
                     alt="Kry Vichhika"
@@ -212,9 +222,22 @@ export default function Hero() {
                   />
                   <div className="profile-photo-grid" />
                   <div className="profile-scan" />
+                  <span className="id-photo-tag">STAFF</span>
+                </div>
+
+                <div className="id-info">
+                  <p className="id-name">KRY VICHHIKA</p>
+                  <p className="id-role">Software Developer</p>
+                  <div className="id-meta">
+                    <span>ID: KV-2004</span>
+                    <span className="id-status">
+                      <span className="id-status-dot animate-pulse" />
+                      ACTIVE
+                    </span>
+                  </div>
+                  <div className="id-barcode" />
                 </div>
               </div>
-              <span className="profile-tag">ID // KRY-VICH</span>
             </div>
           </div>
           {/* Social Media Icons */}

@@ -200,42 +200,144 @@ body {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-/* ── HERO PROFILE FRAME ── */
-.profile-frame-backdrop {
+/* HERO STAFF ID BADGE */
+.id-lanyard {
   position: absolute;
-  inset: 0;
-  transform: translate(14px, 14px);
-  border: 1px solid var(--border);
-  background-image:
-    linear-gradient(var(--grid-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-  background-size: 14px 14px;
-  clip-path: polygon(22px 0%, 100% 0%, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0% 100%, 0% 22px);
+  left: 50%;
+  bottom: calc(100% - 6px);
+  width: 0;
+  height: 170px;
+  z-index: 2;
+  pointer-events: none;
 }
-.profile-frame {
+.id-strap {
   position: absolute;
-  inset: 0;
-  z-index: 1;
-  padding: 9px;
+  bottom: 0;
+  left: 50%;
+  width: 16px;
+  height: 170px;
   background:
-    linear-gradient(135deg, var(--accent) 0%, transparent 32%, transparent 68%, var(--accent2) 100%),
-    var(--bg2);
-  clip-path: polygon(24px 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0% 100%, 0% 24px);
-  box-shadow: 0 0 36px var(--glow);
+    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.28) 0 7px, transparent 7px 14px),
+    linear-gradient(to bottom, var(--accent2), var(--accent));
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 18px var(--glow);
+  transform-origin: bottom center;
 }
-.profile-photo {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.id-strap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+}
+.id-strap::before {
+  content: 'KRY VICHHIKA · STAFF ·';
+  position: absolute;
+  inset: 8px 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
   overflow: hidden;
-  clip-path: polygon(18px 0%, 100% 0%, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0% 100%, 0% 18px);
+  text-align: center;
+  white-space: nowrap;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.34rem;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.55);
 }
-.profile-photo img {
+.id-strap-left { transform: translateX(-50%) rotate(20deg); }
+.id-strap-right { transform: translateX(-50%) rotate(-20deg); }
+.id-clip {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  z-index: 3;
+  width: 34px;
+  height: 26px;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  background: linear-gradient(160deg, #eef3fa, #98a5ba 45%, #d9e0ec 55%, #66738a);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45), 0 0 10px var(--glow);
+}
+.id-clip::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 10px;
+  height: 12px;
+  transform: translateX(-50%);
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  background: var(--bg2);
+}
+.id-card {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  clip-path: polygon(14px 0%, 100% 0%, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0% 100%, 0% 14px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35), 0 0 40px var(--glow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.id-card:hover {
+  transform: translateY(-4px) rotate(-1deg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45), 0 0 60px var(--glow);
+}
+.id-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem 0.3rem 0.6rem;
+}
+.id-card-org {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+}
+.id-chip {
+  position: relative;
+  width: 26px;
+  height: 20px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #d9b64a, #f9e9a0 35%, #b98a1f 60%, #f4dc84 100%);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+.id-chip::after {
+  content: '';
+  position: absolute;
+  inset: 4px 6px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 2px;
+}
+.id-photo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.id-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
   display: block;
+}
+.id-photo-tag {
+  position: absolute;
+  top: 0.45rem;
+  left: 0.45rem;
+  z-index: 2;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.45rem;
+  letter-spacing: 0.16em;
+  padding: 0.2rem 0.45rem;
+  color: var(--bg);
+  background: var(--accent);
+  clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
 }
 .profile-photo-grid {
   position: absolute;
@@ -264,21 +366,61 @@ body {
   90% { opacity: 0.8; }
   100% { top: 100%; opacity: 0; }
 }
-.profile-tag {
-  position: absolute;
-  z-index: 2;
-  left: -10px;
-  bottom: -13px;
+.id-info {
+  padding: 0.7rem 0.3rem 0.3rem;
+}
+.id-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: var(--text);
+}
+.id-role {
+  margin-top: 0.22rem;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.55rem;
   letter-spacing: 0.14em;
-  padding: 0.32rem 0.65rem;
+  text-transform: uppercase;
   color: var(--accent);
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  box-shadow: 0 0 16px var(--glow);
 }
-
+.id-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.55rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  color: var(--text2);
+}
+.id-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #22c55e;
+}
+.id-status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 6px #22c55e;
+}
+.id-barcode {
+  margin-top: 0.6rem;
+  height: 24px;
+  opacity: 0.7;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--text) 0 1px, transparent 1px 4px,
+    var(--text) 4px 6px, transparent 6px 9px,
+    var(--text) 9px 10px, transparent 10px 14px
+  );
+}
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg2); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
