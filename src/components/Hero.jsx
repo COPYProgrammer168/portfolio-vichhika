@@ -80,7 +80,7 @@ export default function Hero() {
               className="font-orbitron font-black leading-none light-sweep glitch"
               style={{
                 fontFamily: "Orbitron, sans-serif",
-                fontSize: "clamp(4rem, 10vw, 7rem)",
+                fontSize: "clamp(2.75rem, 10vw, 7rem)",
                 color: "var(--accent)",
                 lineHeight: "1.05",
               }}
@@ -196,46 +196,52 @@ export default function Hero() {
         {/* Right — Visual */}
         <div className="flex flex-col items-center gap-8">
           {/* Staff ID badge */}
-          <div className="relative">
-            <div
-              className="absolute inset-0 blur-2xl opacity-30"
-              style={{ background: "var(--accent)", transform: "scale(1.05)" }}
-            />
-            <div className="relative w-60 md:w-64">
-              <div className="id-lanyard" aria-hidden="true">
-                <span className="id-strap id-strap-left" />
-                <span className="id-strap id-strap-right" />
-                <span className="id-clip" />
-              </div>
-
-              <div className="id-card">
-                <div className="id-card-top">
-                  <span className="id-card-org">STAFF ID // 2026</span>
-                  <span className="id-chip" />
+          <div className="relative flex w-full justify-center pt-5 md:pt-0">
+            <div className="relative">
+              <div
+                className="absolute inset-0 blur-2xl opacity-25"
+                style={{ background: "var(--accent)", transform: "scale(1.05)" }}
+              />
+              <div className="relative w-[236px] sm:w-[252px] md:w-64">
+                <div className="id-lanyard" aria-hidden="true">
+                  <span className="id-strap id-strap-left" />
+                  <span className="id-strap id-strap-right" />
+                  <span className="id-clip" />
                 </div>
 
-                <div className="id-photo">
-                  <img
-                    src={myPhoto}
-                    alt="Kry Vichhika"
-                    className="w-full h-full object-cover object-top"
-                  />
-                  <div className="profile-photo-grid" />
-                  <div className="profile-scan" />
-                  <span className="id-photo-tag">STAFF</span>
-                </div>
-
-                <div className="id-info">
-                  <p className="id-name">KRY VICHHIKA</p>
-                  <p className="id-role">Software Developer</p>
-                  <div className="id-meta">
-                    <span>ID: KV-2004</span>
-                    <span className="id-status">
-                      <span className="id-status-dot animate-pulse" />
-                      ACTIVE
-                    </span>
+                <div className="id-card">
+                  <div className="id-card-top">
+                    <div className="id-card-heading">
+                      <span className="id-card-org">DEVELOPER ID</span>
+                      <span className="id-card-sub">PORTFOLIO // 2026</span>
+                    </div>
+                    <span className="id-chip" />
                   </div>
-                  <div className="id-barcode" />
+
+                  <div className="id-photo">
+                    <img
+                      src={myPhoto}
+                      alt="Kry Vichhika"
+                      className="w-full h-full object-cover object-top"
+                    />
+                    <div className="profile-photo-grid" />
+                    <div className="profile-scan" />
+                    <span className="id-photo-tag">DEV</span>
+                  </div>
+
+                  <div className="id-info">
+                    <p className="id-name">KRY VICHHIKA</p>
+                    <p className="id-role">Software Developer</p>
+                    <div className="id-meta">
+                      <span>ID: KV-2004</span>
+                      <span className="id-status">
+                        <span className="id-status-dot animate-pulse" />
+                        ACTIVE
+                      </span>
+                    </div>
+                    <div className="id-barcode" />
+                    <p className="id-barcode-num">KV-2004-2026</p>
+                  </div>
                 </div>
               </div>
             </div>
