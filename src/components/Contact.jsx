@@ -294,39 +294,6 @@ export default function Contact() {
                           <>✉ &nbsp;SEND MESSAGE</>
                         )}
                       </button>
-
-                      {/* Reach me via */}
-                      <div className="pt-2">
-                        <p className="font-orbitron text-xs tracking-wider mb-3 opacity-50"
-                          style={{ fontFamily: 'Orbitron, sans-serif', color: 'var(--text2)', fontSize: '0.6rem' }}>
-                          {'>'} REACH_ME_VIA
-                        </p>
-                        <div className="flex flex-wrap gap-3">
-                          <a
-                            href="mailto:vichhika.kry@gmail.com"
-                            className="sci-card px-4 py-2 flex items-center gap-2"
-                            style={{ textDecoration: 'none' }}
-                          >
-                            <span style={{ color: 'var(--accent)', fontSize: '0.9rem' }}>✉</span>
-                            <span className="font-orbitron text-xs" style={{ fontFamily: 'Orbitron, sans-serif', color: 'var(--text)' }}>
-                              vichhika.kry@gmail.com
-                            </span>
-                          </a>
-                          <a
-                            href="https://t.me/@vichhika_949"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="sci-card px-4 py-2 flex items-center gap-2"
-                            style={{ textDecoration: 'none' }}
-                          >
-                            <span style={{ color: 'var(--accent2)', fontSize: '0.9rem' }}>✈</span>
-                            <span className="font-orbitron text-xs" style={{ fontFamily: 'Orbitron, sans-serif', color: 'var(--text)' }}>
-                              @vichhika_949
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-
                       <p className="text-xs text-center opacity-40 mt-2" style={{ color: 'var(--text2)', fontFamily: 'Exo 2, sans-serif' }}>
                         Message will be delivered to vichhika.kry@gmail.com or 012-949-139
                       </p>
