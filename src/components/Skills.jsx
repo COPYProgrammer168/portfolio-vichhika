@@ -8,7 +8,8 @@ const skills = [
   { name: "UX/UI (Figma)", level: 75, desc: "Prototype & website design", icon: "🎨", cat: "Design" },
   { name: "PS / AE", level: 70, desc: "Editing, posters, motion effects", icon: "🖌️", cat: "Design" },
   { name: "Word / PPT", level: 85, desc: "Documentation & slide design", icon: "📝", cat: "Tools" },
-  { name: "AI Prompt Engineering", level: 60, desc: "AI integration in projects", icon: "🤖", cat: "Emerging" },
+  { name: "Git + SSH", level: 70, desc: "Version control & secure server access", icon: "🌿", cat: "Tools" },
+  { name: "Deployment", level: 70, desc: "Hostinger & Render deployment", icon: "🚀", cat: "DevOps" },
 ];
 
 export default function Skills() {
